@@ -14,6 +14,12 @@
 		4EFCEE6C29A3FCB000B9502D /* appointme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6A29A3FCB000B9502D /* appointme.xcdatamodeld */; };
 		4EFCEE6E29A3FCB100B9502D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6D29A3FCB100B9502D /* Assets.xcassets */; };
 		4EFCEE7129A3FCB100B9502D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6F29A3FCB100B9502D /* LaunchScreen.storyboard */; };
+		4EFCEE8429A3FD8800B9502D /* customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8229A3FD8800B9502D /* customer+CoreDataClass.swift */; };
+		4EFCEE8529A3FD8800B9502D /* customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8329A3FD8800B9502D /* customer+CoreDataProperties.swift */; };
+		4EFCEE8829A3FDA900B9502D /* business+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8629A3FDA900B9502D /* business+CoreDataClass.swift */; };
+		4EFCEE8929A3FDA900B9502D /* business+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8729A3FDA900B9502D /* business+CoreDataProperties.swift */; };
+		4EFCEE8C29A3FDBB00B9502D /* appointment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8A29A3FDBB00B9502D /* appointment+CoreDataClass.swift */; };
+		4EFCEE8D29A3FDBB00B9502D /* appointment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8B29A3FDBB00B9502D /* appointment+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		4EFCEE6D29A3FCB100B9502D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EFCEE7029A3FCB100B9502D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EFCEE7229A3FCB100B9502D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EFCEE8229A3FD8800B9502D /* customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "customer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4EFCEE8329A3FD8800B9502D /* customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4EFCEE8629A3FDA900B9502D /* business+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "business+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4EFCEE8729A3FDA900B9502D /* business+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "business+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4EFCEE8A29A3FDBB00B9502D /* appointment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "appointment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4EFCEE8B29A3FDBB00B9502D /* appointment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "appointment+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,9 @@
 		4EFCEE6029A3FCB000B9502D /* appointme */ = {
 			isa = PBXGroup;
 			children = (
+				4EFCEE7E29A3FD6900B9502D /* controller */,
+				4EFCEE7D29A3FD6600B9502D /* view */,
+				4EFCEE7C29A3FD6300B9502D /* model */,
 				4EFCEE6129A3FCB000B9502D /* AppDelegate.swift */,
 				4EFCEE6329A3FCB000B9502D /* SceneDelegate.swift */,
 				4EFCEE6529A3FCB000B9502D /* ViewController.swift */,
@@ -68,6 +83,57 @@
 				4EFCEE6A29A3FCB000B9502D /* appointme.xcdatamodeld */,
 			);
 			path = appointme;
+			sourceTree = "<group>";
+		};
+		4EFCEE7C29A3FD6300B9502D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4EFCEE8129A3FD7600B9502D /* appointment */,
+				4EFCEE8029A3FD7200B9502D /* customer */,
+				4EFCEE7F29A3FD6F00B9502D /* business */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4EFCEE7D29A3FD6600B9502D /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4EFCEE7E29A3FD6900B9502D /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4EFCEE7F29A3FD6F00B9502D /* business */ = {
+			isa = PBXGroup;
+			children = (
+				4EFCEE8629A3FDA900B9502D /* business+CoreDataClass.swift */,
+				4EFCEE8729A3FDA900B9502D /* business+CoreDataProperties.swift */,
+			);
+			path = business;
+			sourceTree = "<group>";
+		};
+		4EFCEE8029A3FD7200B9502D /* customer */ = {
+			isa = PBXGroup;
+			children = (
+				4EFCEE8229A3FD8800B9502D /* customer+CoreDataClass.swift */,
+				4EFCEE8329A3FD8800B9502D /* customer+CoreDataProperties.swift */,
+			);
+			path = customer;
+			sourceTree = "<group>";
+		};
+		4EFCEE8129A3FD7600B9502D /* appointment */ = {
+			isa = PBXGroup;
+			children = (
+				4EFCEE8A29A3FDBB00B9502D /* appointment+CoreDataClass.swift */,
+				4EFCEE8B29A3FDBB00B9502D /* appointment+CoreDataProperties.swift */,
+			);
+			path = appointment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +208,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EFCEE6629A3FCB000B9502D /* ViewController.swift in Sources */,
+				4EFCEE8929A3FDA900B9502D /* business+CoreDataProperties.swift in Sources */,
+				4EFCEE8829A3FDA900B9502D /* business+CoreDataClass.swift in Sources */,
+				4EFCEE8C29A3FDBB00B9502D /* appointment+CoreDataClass.swift in Sources */,
 				4EFCEE6229A3FCB000B9502D /* AppDelegate.swift in Sources */,
 				4EFCEE6429A3FCB000B9502D /* SceneDelegate.swift in Sources */,
+				4EFCEE8429A3FD8800B9502D /* customer+CoreDataClass.swift in Sources */,
 				4EFCEE6C29A3FCB000B9502D /* appointme.xcdatamodeld in Sources */,
+				4EFCEE8529A3FD8800B9502D /* customer+CoreDataProperties.swift in Sources */,
+				4EFCEE8D29A3FDBB00B9502D /* appointment+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
