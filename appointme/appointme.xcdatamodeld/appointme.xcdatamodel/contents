@@ -4,7 +4,7 @@
         <attribute name="appt_date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="appt_id" attributeType="String"/>
         <attribute name="business_id" attributeType="String"/>
-        <attribute name="customer_id" attributeType="String"/>
+        <attribute name="customer_id" optional="YES" attributeType="String"/>
         <attribute name="requests" optional="YES" attributeType="String"/>
         <relationship name="business" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="appointment" inverseEntity="Business"/>
         <relationship name="customer" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="appointment" inverseEntity="Customer"/>
@@ -24,6 +24,6 @@
         <attribute name="customer_id" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="phone" attributeType="String"/>
-        <relationship name="appointment" toMany="YES" deletionRule="Cascade" destinationEntity="Appointment" inverseName="customer" inverseEntity="Appointment"/>
+        <relationship name="appointment" toMany="YES" deletionRule="Nullify" destinationEntity="Appointment" inverseName="customer" inverseEntity="Appointment"/>
     </entity>
 </model>
