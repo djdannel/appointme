@@ -17,16 +17,19 @@ class SampleBusinesses {
     
     static func createSampleBusinesses() {
         business1.business_id = generateID()
-        business1.picture = UIImage(named: "placeholder")!.pngData()
-        business1.business_name = "Business 1"
+        business1.service = "grooming"
+        business1.picture = UIImage(named: "grooming")!.pngData()
+        business1.business_name = "Martha's Pet Grooming"
         
         business2.business_id = generateID()
-        business2.picture = UIImage(named: "placeholder")!.pngData()
-        business2.business_name = "Business 2"
+        business2.service = "plumbing"
+        business2.picture = UIImage(named: "plumbing")!.pngData()
+        business2.business_name = "Frank's Fast Plumbing"
         
         business3.business_id = generateID()
-        business3.picture = UIImage(named: "placeholder")!.pngData()
-        business3.business_name = "Business 3"
+        business3.service = "roofing"
+        business3.picture = UIImage(named: "roofing")!.pngData()
+        business3.business_name = "Tony's Top Roofing"
         
         do { try context.save() } catch {}
     }

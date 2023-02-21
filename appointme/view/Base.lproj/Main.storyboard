@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--AppointMe-->
         <scene sceneID="VH7-rB-o5c">
             <objects>
                 <viewController id="SFz-Zs-uwS" customClass="HomeViewController" customModule="appointme" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,41 +28,52 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2k-QK-z4l">
-                                                    <rect key="frame" x="5" y="5" width="365" height="240"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="234"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="wv8-7F-M1a">
-                                                            <rect key="frame" x="0.0" y="0.0" width="365" height="178"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="178"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="178" id="3ag-a0-I6e"/>
                                                                 <constraint firstAttribute="width" constant="365" id="DJU-VQ-4Q4"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUl-BJ-BKI">
-                                                            <rect key="frame" x="8" y="186" width="349" height="38"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUl-BJ-BKI">
+                                                            <rect key="frame" x="0.0" y="178" width="291" height="56"/>
+                                                            <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YiW-4P-2Vi">
+                                                            <rect key="frame" x="321" y="191" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="fmt-Ak-vQU"/>
+                                                                <constraint firstAttribute="height" constant="30" id="s7K-HQ-rbI"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="UUl-BJ-BKI" firstAttribute="leading" secondItem="q2k-QK-z4l" secondAttribute="leading" constant="8" id="3Mt-DF-dK4"/>
+                                                        <constraint firstItem="UUl-BJ-BKI" firstAttribute="leading" secondItem="q2k-QK-z4l" secondAttribute="leading" id="3Mt-DF-dK4"/>
                                                         <constraint firstItem="wv8-7F-M1a" firstAttribute="leading" secondItem="q2k-QK-z4l" secondAttribute="leading" id="7Nc-yD-TZD"/>
-                                                        <constraint firstAttribute="bottom" secondItem="UUl-BJ-BKI" secondAttribute="bottom" constant="16" id="94a-VG-q4x"/>
+                                                        <constraint firstAttribute="bottom" secondItem="UUl-BJ-BKI" secondAttribute="bottom" id="94a-VG-q4x"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YiW-4P-2Vi" secondAttribute="bottom" constant="13" id="OLp-hV-FtU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YiW-4P-2Vi" secondAttribute="trailing" constant="8" id="cvi-zl-Lhd"/>
                                                         <constraint firstAttribute="trailing" secondItem="wv8-7F-M1a" secondAttribute="trailing" id="eKv-WR-tys"/>
-                                                        <constraint firstItem="UUl-BJ-BKI" firstAttribute="top" secondItem="wv8-7F-M1a" secondAttribute="bottom" constant="8" symbolic="YES" id="ezS-Ue-JEk"/>
-                                                        <constraint firstAttribute="trailing" secondItem="UUl-BJ-BKI" secondAttribute="trailing" constant="8" id="f1a-vy-Pdn"/>
+                                                        <constraint firstItem="UUl-BJ-BKI" firstAttribute="top" secondItem="wv8-7F-M1a" secondAttribute="bottom" id="ezS-Ue-JEk"/>
+                                                        <constraint firstItem="YiW-4P-2Vi" firstAttribute="top" secondItem="wv8-7F-M1a" secondAttribute="bottom" constant="13" id="fDG-od-Dwg"/>
+                                                        <constraint firstItem="YiW-4P-2Vi" firstAttribute="leading" secondItem="UUl-BJ-BKI" secondAttribute="trailing" constant="30" id="m2Q-YI-XyU"/>
                                                         <constraint firstItem="wv8-7F-M1a" firstAttribute="top" secondItem="q2k-QK-z4l" secondAttribute="top" id="pSc-lp-VxZ"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="q2k-QK-z4l" secondAttribute="trailing" constant="5" id="34A-Pd-sTH"/>
-                                                <constraint firstAttribute="bottom" secondItem="q2k-QK-z4l" secondAttribute="bottom" constant="5" id="DnR-EZ-znw"/>
-                                                <constraint firstItem="q2k-QK-z4l" firstAttribute="top" secondItem="7mR-Sn-elF" secondAttribute="top" constant="5" id="Thf-3V-rWM"/>
-                                                <constraint firstItem="q2k-QK-z4l" firstAttribute="leading" secondItem="7mR-Sn-elF" secondAttribute="leading" constant="5" id="ns9-oo-bj0"/>
+                                                <constraint firstAttribute="trailing" secondItem="q2k-QK-z4l" secondAttribute="trailing" constant="8" id="34A-Pd-sTH"/>
+                                                <constraint firstAttribute="bottom" secondItem="q2k-QK-z4l" secondAttribute="bottom" constant="8" id="DnR-EZ-znw"/>
+                                                <constraint firstItem="q2k-QK-z4l" firstAttribute="top" secondItem="7mR-Sn-elF" secondAttribute="top" constant="8" id="Thf-3V-rWM"/>
+                                                <constraint firstItem="q2k-QK-z4l" firstAttribute="leading" secondItem="7mR-Sn-elF" secondAttribute="leading" constant="8" id="ns9-oo-bj0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="businessCatImg" destination="YiW-4P-2Vi" id="EMP-BJ-02g"/>
                                             <outlet property="businessImg" destination="wv8-7F-M1a" id="lVy-wn-5Lc"/>
                                             <outlet property="businessLbl" destination="UUl-BJ-BKI" id="v6Y-G0-cTv"/>
                                             <outlet property="businessView" destination="7mR-Sn-elF" id="G96-Se-uvn"/>
@@ -80,7 +91,7 @@
                             <constraint firstItem="7VW-gD-L08" firstAttribute="bottom" secondItem="0sv-oZ-4hX" secondAttribute="bottom" id="Q6B-1a-xNy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="icx-nc-c7Q"/>
+                    <navigationItem key="navigationItem" title="AppointMe" id="icx-nc-c7Q"/>
                     <connections>
                         <outlet property="businessView" destination="0sv-oZ-4hX" id="JhX-Re-D1X"/>
                     </connections>

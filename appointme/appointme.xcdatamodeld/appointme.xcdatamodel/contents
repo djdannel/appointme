@@ -16,6 +16,7 @@
         <attribute name="password" attributeType="String"/>
         <attribute name="phone" attributeType="String"/>
         <attribute name="picture" attributeType="Binary"/>
+        <attribute name="service" attributeType="String"/>
         <attribute name="username" attributeType="String"/>
         <attribute name="zip" attributeType="String"/>
         <relationship name="appointment" toMany="YES" deletionRule="Cascade" destinationEntity="Appointment" inverseName="business" inverseEntity="Appointment"/>

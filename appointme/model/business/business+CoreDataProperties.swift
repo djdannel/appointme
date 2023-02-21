@@ -24,6 +24,7 @@ extension business {
     @NSManaged public var picture: Data?
     @NSManaged public var username: String?
     @NSManaged public var zip: String?
+    @NSManaged public var service: String?
     @NSManaged public var appointment: NSSet?
 
 }

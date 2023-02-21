@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var businessView: UITableView!
      
-    var businesses = [business]()
+    var businesses = [business]().self
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,24 @@ class HomeViewController: UIViewController {
         }
         catch {}
     }
+    
+    private func determineCategoryImage(category: String) -> UIImage {
+        var image = UIImage()
+        switch category {
+        case "grooming":
+            image = UIImage(named: "dog")!
+            break
+        case "plumbing":
+            image = UIImage(named: "pipe")!
+            break
+        case "roofing":
+            image = UIImage(named: "roof")!
+            break
+        default:
+            image = UIImage(named: "placeholder")!
+        }
+        return image
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -48,6 +66,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let a_business = businesses[indexPath.row]
         cell.businessImg.image = UIImage(data: a_business.picture!)
         cell.businessLbl.text = a_business.business_name
+        cell.businessCatImg.image = determineCategoryImage(category: a_business.service!)
         
         return cell
     }
