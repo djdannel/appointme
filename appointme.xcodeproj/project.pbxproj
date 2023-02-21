@@ -11,6 +11,7 @@
 		4E51DE9229A439170020A6DD /* SampleBusinesses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51DE9129A439170020A6DD /* SampleBusinesses.swift */; };
 		4E51DE9729A4459B0020A6DD /* business+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51DE9529A4459B0020A6DD /* business+CoreDataClass.swift */; };
 		4E51DE9829A4459B0020A6DD /* business+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51DE9629A4459B0020A6DD /* business+CoreDataProperties.swift */; };
+		4E51DE9C29A449C50020A6DD /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51DE9B29A449C50020A6DD /* BusinessViewController.swift */; };
 		4EFCEE6229A3FCB000B9502D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6129A3FCB000B9502D /* AppDelegate.swift */; };
 		4EFCEE6429A3FCB000B9502D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6329A3FCB000B9502D /* SceneDelegate.swift */; };
 		4EFCEE6929A3FCB000B9502D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6729A3FCB000B9502D /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		4E51DE9129A439170020A6DD /* SampleBusinesses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBusinesses.swift; sourceTree = "<group>"; };
 		4E51DE9529A4459B0020A6DD /* business+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "business+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4E51DE9629A4459B0020A6DD /* business+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "business+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4E51DE9B29A449C50020A6DD /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		4EFCEE5E29A3FCB000B9502D /* appointme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appointme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFCEE6129A3FCB000B9502D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EFCEE6329A3FCB000B9502D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				4EFCEE8E29A401B800B9502D /* HomeViewController.swift */,
+				4E51DE9B29A449C50020A6DD /* BusinessViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				4EFCEE6429A3FCB000B9502D /* SceneDelegate.swift in Sources */,
 				4EFCEE8F29A401B800B9502D /* HomeViewController.swift in Sources */,
 				4EFCEE8429A3FD8800B9502D /* customer+CoreDataClass.swift in Sources */,
+				4E51DE9C29A449C50020A6DD /* BusinessViewController.swift in Sources */,
 				4EFCEE6C29A3FCB000B9502D /* appointme.xcdatamodeld in Sources */,
 				4E51DE9729A4459B0020A6DD /* business+CoreDataClass.swift in Sources */,
 				4E51DE8B29A431D00020A6DD /* BusinessCell.swift in Sources */,

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="91" width="375" height="687"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="businessCell" rowHeight="250" id="5NS-dc-Lsu" customClass="BusinessCell" customModule="appointme" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="businessCell" rowHeight="250" id="5NS-dc-Lsu" customClass="BusinessCell" customModule="appointme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5NS-dc-Lsu" id="7mR-Sn-elF">
@@ -94,11 +94,72 @@
                     <navigationItem key="navigationItem" title="AppointMe" id="icx-nc-c7Q"/>
                     <connections>
                         <outlet property="businessView" destination="0sv-oZ-4hX" id="JhX-Re-D1X"/>
+                        <segue destination="sGJ-02-GaR" kind="presentation" identifier="goToSetAppt" id="z8W-q3-VcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLz-dt-WeQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="730.39999999999998" y="-107.14285714285715"/>
+        </scene>
+        <!--Business View Controller-->
+        <scene sceneID="bdv-mw-gYZ">
+            <objects>
+                <viewController id="sGJ-02-GaR" customClass="BusinessViewController" customModule="appointme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pAV-fE-djy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Mtu-2D-IEv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mtu-2D-IEv" secondAttribute="height" multiplier="125:66" id="BFt-ij-G3E"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QdY-RN-xml">
+                                <rect key="frame" x="16" y="206" width="343" height="73.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRi-7s-OpF">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-hO-yFD">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="22.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-Xq-rDn">
+                                        <rect key="frame" x="0.0" y="50.666666666666686" width="343" height="22.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6mM-Q9-Zf9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6mM-Q9-Zf9" firstAttribute="trailing" secondItem="QdY-RN-xml" secondAttribute="trailing" constant="16" id="0QO-ZC-tKd"/>
+                            <constraint firstItem="QdY-RN-xml" firstAttribute="leading" secondItem="6mM-Q9-Zf9" secondAttribute="leading" constant="16" id="3HY-Rv-ogT"/>
+                            <constraint firstItem="Mtu-2D-IEv" firstAttribute="top" secondItem="pAV-fE-djy" secondAttribute="top" id="gWq-KS-ind"/>
+                            <constraint firstItem="QdY-RN-xml" firstAttribute="top" secondItem="Mtu-2D-IEv" secondAttribute="bottom" constant="8" symbolic="YES" id="pvn-Eq-EP5"/>
+                            <constraint firstItem="Mtu-2D-IEv" firstAttribute="leading" secondItem="6mM-Q9-Zf9" secondAttribute="leading" id="vhT-SE-xT2"/>
+                            <constraint firstItem="Mtu-2D-IEv" firstAttribute="trailing" secondItem="6mM-Q9-Zf9" secondAttribute="trailing" id="y8v-ZS-cuj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="businessAdrLbl" destination="gjG-hO-yFD" id="vGq-3p-XAu"/>
+                        <outlet property="businessImg" destination="Mtu-2D-IEv" id="jJ1-5t-Dcl"/>
+                        <outlet property="businessNameLbl" destination="TRi-7s-OpF" id="4gp-mP-G1r"/>
+                        <outlet property="businessPhoneLbl" destination="pgc-Xq-rDn" id="rNZ-Gv-k6A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7f-I8-rPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="-107.14285714285715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qLN-IM-fTa">

@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var businessView: UITableView!
      
     var businesses = [business]().self
+    var businessIdxPath = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,13 @@ class HomeViewController: UIViewController {
         }
         return image
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSetAppt" {
+            let businessVC = segue.destination as! BusinessViewController
+            businessVC.business = businesses[businessIdxPath]
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -59,6 +67,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        businessIdxPath = indexPath.row
+        self.performSegue(withIdentifier: "goToSetAppt", sender: self)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
