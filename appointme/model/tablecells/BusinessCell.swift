@@ -13,6 +13,7 @@ class BusinessCell: UITableViewCell {
     @IBOutlet weak var businessImg: UIImageView!
     @IBOutlet weak var businessCatImg: UIImageView!
     @IBOutlet weak var businessLbl: UILabel!
+    @IBOutlet weak var businessLocLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

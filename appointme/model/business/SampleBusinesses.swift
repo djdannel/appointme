@@ -22,6 +22,9 @@ class SampleBusinesses {
         business1.business_name = "Martha's Pet Grooming"
         business1.address = "123 8th Street"
         business1.phone = "123-456-7890"
+        business1.city = "Miami"
+        business1.state = "FL"
+        business1.desc = "This is the description for Martha's Pet Grooming. We do a lot of pet grooming stuff for all types of doggos and puppers!"
         
         business2.business_id = generateID()
         business2.service = "plumbing"
@@ -29,13 +32,19 @@ class SampleBusinesses {
         business2.business_name = "Frank's Fast Plumbing"
         business2.address = "Vehicle-based"
         business2.phone = "(123)-456-7890"
+        business2.city = "Homestead"
+        business2.state = "FL"
+        business2.desc = "This is the description for Frank's Fast Plumbing. If you have a leak, a clog, or anything wrong with your home plumbing, Frank's Fast Plumbing is here for you!"
         
         business3.business_id = generateID()
         business3.service = "roofing"
         business3.picture = UIImage(named: "roofing")!.pngData()
-        business3.business_name = "Tony's Top Roofing"
-        business3.address = "123 8th Street"
-        business3.phone = "123-456-7890"
+        business3.business_name = "Roger's Roofing"
+        business3.address = "Vehicle-based"
+        business3.phone = "(123)-456-7890"
+        business3.city = "Hialeah"
+        business3.state = "FL"
+        business3.desc = "This is the description for Roger's Roofing. Want to install solar panels? Redo your roof? I'm the man!"
         
         do { try context.save() } catch {}
     }
@@ -48,6 +57,24 @@ class SampleBusinesses {
         do { try context.save() } catch {}
     }
     
+    static func determineCategoryImage(category: String) -> UIImage {
+        var image = UIImage()
+        switch category {
+        case "grooming":
+            image = UIImage(named: "dog")!
+            break
+        case "plumbing":
+            image = UIImage(named: "pipe")!
+            break
+        case "roofing":
+            image = UIImage(named: "roof")!
+            break
+        default:
+            image = UIImage(named: "placeholder")!
+        }
+        return image
+    }
+    
     private static func generateID() -> String {
         var number = String()
         for _ in 1...6 {
@@ -55,4 +82,5 @@ class SampleBusinesses {
         }
         return number
     }
+
 }

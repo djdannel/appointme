@@ -2,7 +2,7 @@
 //  business+CoreDataProperties.swift
 //  appointme
 //
-//  Created by Daniel Alvarez on 2/20/23.
+//  Created by Daniel Alvarez on 2/21/23.
 //
 //
 
@@ -22,9 +22,11 @@ extension business {
     @NSManaged public var password: String?
     @NSManaged public var phone: String?
     @NSManaged public var picture: Data?
-    @NSManaged public var username: String?
-    @NSManaged public var zip: String?
     @NSManaged public var service: String?
+    @NSManaged public var username: String?
+    @NSManaged public var desc: String?
+    @NSManaged public var city: String?
+    @NSManaged public var state: String?
     @NSManaged public var appointment: NSSet?
 
 }

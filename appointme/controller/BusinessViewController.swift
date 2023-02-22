@@ -15,6 +15,8 @@ class BusinessViewController: UIViewController {
     @IBOutlet weak var businessNameLbl: UILabel!
     @IBOutlet weak var businessAdrLbl: UILabel!
     @IBOutlet weak var businessPhoneLbl: UILabel!
+    @IBOutlet weak var businessCatImg: UIImageView!
+    @IBOutlet weak var businessDescView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,7 @@ class BusinessViewController: UIViewController {
         businessNameLbl.text = business?.business_name
         businessAdrLbl.text = (business?.address)!
         businessPhoneLbl.text = "Phone: " + (business?.phone)!
+        businessCatImg.image = SampleBusinesses.determineCategoryImage(category: business!.service!)
+        businessDescView.text = business!.desc
     }
-
 }

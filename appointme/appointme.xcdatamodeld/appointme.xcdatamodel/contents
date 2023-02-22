@@ -13,12 +13,14 @@
         <attribute name="address" attributeType="String"/>
         <attribute name="business_id" attributeType="String"/>
         <attribute name="business_name" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="desc" attributeType="String"/>
         <attribute name="password" attributeType="String"/>
         <attribute name="phone" attributeType="String"/>
         <attribute name="picture" attributeType="Binary"/>
         <attribute name="service" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
         <attribute name="username" attributeType="String"/>
-        <attribute name="zip" attributeType="String"/>
         <relationship name="appointment" toMany="YES" deletionRule="Cascade" destinationEntity="Appointment" inverseName="business" inverseEntity="Appointment"/>
     </entity>
     <entity name="Customer" representedClassName=".customer" syncable="YES">
