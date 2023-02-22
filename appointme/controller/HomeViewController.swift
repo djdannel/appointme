@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     private func getBusinesses() {
         do {
             businesses = try context.fetch(business.fetchRequest())
+            businesses.sort(by: {$0.rating > $1.rating})
             filterData = businesses
             businessView.reloadData()
         }
@@ -68,6 +69,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.businessLbl.text = a_business.business_name
         cell.businessCatImg.image = SampleBusinesses.determineCategoryImage(category: a_business.service!)
         cell.businessLocLbl.text = a_business.city! + ", " + a_business.state!
+        cell.businessRtgLbl.text = String(a_business.rating)
         
         return cell
     }

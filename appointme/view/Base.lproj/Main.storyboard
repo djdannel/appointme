@@ -72,12 +72,25 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO5-hM-yQ8">
+                                                            <rect key="frame" x="309" y="8" width="42" height="21"/>
+                                                            <color key="backgroundColor" red="0.37602600912877537" green="0.83711663377348078" blue="0.47588539975506533" alpha="0.75076708836858008" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="42" id="1Va-64-oxG"/>
+                                                                <constraint firstAttribute="height" constant="21" id="wSt-xM-pc6"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="wv8-7F-M1a" firstAttribute="leading" secondItem="q2k-QK-z4l" secondAttribute="leading" id="7Nc-yD-TZD"/>
                                                         <constraint firstItem="UhY-Mh-XTu" firstAttribute="leading" secondItem="q2k-QK-z4l" secondAttribute="leading" id="DFD-Zi-CEi"/>
                                                         <constraint firstAttribute="bottom" secondItem="YiW-4P-2Vi" secondAttribute="bottom" constant="13" id="OLp-hV-FtU"/>
                                                         <constraint firstItem="UhY-Mh-XTu" firstAttribute="top" secondItem="wv8-7F-M1a" secondAttribute="bottom" constant="6" id="YcA-f2-Vm5"/>
+                                                        <constraint firstItem="EO5-hM-yQ8" firstAttribute="top" secondItem="q2k-QK-z4l" secondAttribute="top" constant="8" id="Ytf-s8-Oac"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EO5-hM-yQ8" secondAttribute="trailing" constant="8" id="bt7-th-cdP"/>
                                                         <constraint firstAttribute="trailing" secondItem="YiW-4P-2Vi" secondAttribute="trailing" constant="8" id="cvi-zl-Lhd"/>
                                                         <constraint firstAttribute="trailing" secondItem="wv8-7F-M1a" secondAttribute="trailing" id="eKv-WR-tys"/>
                                                         <constraint firstItem="YiW-4P-2Vi" firstAttribute="top" secondItem="wv8-7F-M1a" secondAttribute="bottom" constant="13" id="fDG-od-Dwg"/>
@@ -99,6 +112,7 @@
                                             <outlet property="businessImg" destination="wv8-7F-M1a" id="lVy-wn-5Lc"/>
                                             <outlet property="businessLbl" destination="UUl-BJ-BKI" id="v6Y-G0-cTv"/>
                                             <outlet property="businessLocLbl" destination="TFM-FP-C59" id="m8Q-KD-iDq"/>
+                                            <outlet property="businessRtgLbl" destination="EO5-hM-yQ8" id="luM-WI-eRc"/>
                                             <outlet property="businessView" destination="7mR-Sn-elF" id="G96-Se-uvn"/>
                                         </connections>
                                     </tableViewCell>

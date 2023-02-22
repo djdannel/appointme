@@ -25,6 +25,7 @@ class SampleBusinesses {
         business1.city = "Miami"
         business1.state = "FL"
         business1.desc = "This is the description for Martha's Pet Grooming. We do a lot of pet grooming stuff for all types of doggos and puppers!"
+        business1.rating = 5.0
         
         business2.business_id = generateID()
         business2.service = "plumbing"
@@ -35,6 +36,7 @@ class SampleBusinesses {
         business2.city = "Homestead"
         business2.state = "FL"
         business2.desc = "This is the description for Frank's Fast Plumbing. If you have a leak, a clog, or anything wrong with your home plumbing, Frank's Fast Plumbing is here for you!"
+        business2.rating = 4.8
         
         business3.business_id = generateID()
         business3.service = "roofing"
@@ -45,6 +47,7 @@ class SampleBusinesses {
         business3.city = "Hialeah"
         business3.state = "FL"
         business3.desc = "This is the description for Roger's Roofing. Want to install solar panels? Redo your roof? I'm the man!"
+        business3.rating = 4.9
         
         do { try context.save() } catch {}
     }

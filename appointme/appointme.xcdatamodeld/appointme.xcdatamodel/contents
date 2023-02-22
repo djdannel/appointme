@@ -18,6 +18,7 @@
         <attribute name="password" attributeType="String"/>
         <attribute name="phone" attributeType="String"/>
         <attribute name="picture" attributeType="Binary"/>
+        <attribute name="rating" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="service" attributeType="String"/>
         <attribute name="state" optional="YES" attributeType="String"/>
         <attribute name="username" attributeType="String"/>
