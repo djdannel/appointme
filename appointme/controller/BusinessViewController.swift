@@ -31,4 +31,11 @@ class BusinessViewController: UIViewController {
         businessCatImg.image = SampleBusinesses.determineCategoryImage(category: business!.service!)
         businessDescView.text = business!.desc
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSetAppt" {
+            let apptVC = segue.destination as! AppointmentViewController
+            apptVC.business = business
+        }
+    }
 }

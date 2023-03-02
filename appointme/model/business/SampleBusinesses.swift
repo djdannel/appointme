@@ -14,10 +14,16 @@ class SampleBusinesses {
     static let business1 = business(context: context)
     static let business2 = business(context: context)
     static let business3 = business(context: context)
+    static let appointment1 = appointment(context: context)
+    static let appointment2 = appointment(context: context)
+    static let appointment3 = appointment(context: context)
+    static let dateFormatter = DateFormatter()
+    static let timeFormatter = DateFormatter()
     
     static func createSampleBusinesses() {
+        dateFormatter.dateFormat = "MM/dd/yy HH:mm:ss"
         business1.business_id = generateID()
-        business1.service = "grooming"
+        business1.service = "pet"
         business1.picture = UIImage(named: "grooming")!.pngData()
         business1.business_name = "Martha's Pet Grooming"
         business1.address = "123 8th Street"
@@ -27,11 +33,28 @@ class SampleBusinesses {
         business1.desc = "This is the description for Martha's Pet Grooming. We do a lot of pet grooming stuff for all types of doggos and puppers!"
         business1.rating = 5.0
         
+        appointment1.appt_id = generateID()
+        appointment1.date = dateFormatter.date(from: "03/02/2023 11:00:00")
+        appointment1.business_id = business1.business_id
+        appointment1.at_cust_home = false
+        
+        appointment2.appt_id = generateID()
+        appointment2.date = dateFormatter.date(from: "03/03/2023 14:00:00")
+        appointment2.business_id = business1.business_id
+        appointment2.at_cust_home = false
+        
+        appointment3.appt_id = generateID()
+        appointment3.date = dateFormatter.date(from: "03/04/2023 17:00:00")
+        appointment3.business_id = business1.business_id
+        appointment3.at_cust_home = false
+        
+        business1.addToAppointment(NSSet(objects: appointment1, appointment2, appointment3))
+        
         business2.business_id = generateID()
-        business2.service = "plumbing"
+        business2.service = "house"
         business2.picture = UIImage(named: "plumbing")!.pngData()
         business2.business_name = "Frank's Fast Plumbing"
-        business2.address = "Vehicle-based"
+        business2.address = "On-the-go"
         business2.phone = "(123)-456-7890"
         business2.city = "Homestead"
         business2.state = "FL"
@@ -39,15 +62,16 @@ class SampleBusinesses {
         business2.rating = 4.8
         
         business3.business_id = generateID()
-        business3.service = "roofing"
+        business3.service = "house"
         business3.picture = UIImage(named: "roofing")!.pngData()
         business3.business_name = "Roger's Roofing"
-        business3.address = "Vehicle-based"
+        business3.address = "On-the-go"
         business3.phone = "(123)-456-7890"
         business3.city = "Hialeah"
         business3.state = "FL"
         business3.desc = "This is the description for Roger's Roofing. Want to install solar panels? Redo your roof? I'm the man!"
         business3.rating = 4.9
+        
         
         do { try context.save() } catch {}
     }
@@ -63,14 +87,11 @@ class SampleBusinesses {
     static func determineCategoryImage(category: String) -> UIImage {
         var image = UIImage()
         switch category {
-        case "grooming":
-            image = UIImage(named: "dog")!
+        case "pet":
+            image = UIImage(named: "pet")!
             break
-        case "plumbing":
-            image = UIImage(named: "pipe")!
-            break
-        case "roofing":
-            image = UIImage(named: "roof")!
+        case "house":
+            image = UIImage(named: "house")!
             break
         default:
             image = UIImage(named: "placeholder")!

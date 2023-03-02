@@ -2,7 +2,7 @@
 //  appointment+CoreDataProperties.swift
 //  appointme
 //
-//  Created by Daniel Alvarez on 2/20/23.
+//  Created by Daniel Alvarez on 3/2/23.
 //
 //
 
@@ -16,10 +16,11 @@ extension appointment {
         return NSFetchRequest<appointment>(entityName: "Appointment")
     }
 
-    @NSManaged public var appt_date: Date?
     @NSManaged public var appt_id: String?
+    @NSManaged public var at_cust_home: Bool
     @NSManaged public var business_id: String?
     @NSManaged public var customer_id: String?
+    @NSManaged public var date: Date?
     @NSManaged public var requests: String?
     @NSManaged public var business: business?
     @NSManaged public var customer: customer?

@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToSetAppt" {
+        if segue.identifier == "goToBusinessView" {
             let businessVC = segue.destination as! BusinessViewController
             businessVC.business = businesses[businessIdxPath]
         }
@@ -59,7 +59,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         businessIdxPath = indexPath.row
-        self.performSegue(withIdentifier: "goToSetAppt", sender: self)
+        self.performSegue(withIdentifier: "goToBusinessView", sender: self)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

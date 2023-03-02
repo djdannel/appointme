@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Appointment" representedClassName=".appointment" syncable="YES">
-        <attribute name="appt_date" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="appt_id" attributeType="String"/>
+        <attribute name="appt_id" attributeType="String" defaultValueString=""/>
+        <attribute name="at_cust_home" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
         <attribute name="business_id" attributeType="String"/>
-        <attribute name="customer_id" optional="YES" attributeType="String"/>
-        <attribute name="requests" optional="YES" attributeType="String"/>
+        <attribute name="customer_id" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="date" attributeType="Date" defaultDateTimeInterval="0" usesScalarValueType="NO"/>
+        <attribute name="requests" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="business" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="appointment" inverseEntity="Business"/>
         <relationship name="customer" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="appointment" inverseEntity="Customer"/>
     </entity>
@@ -25,9 +26,11 @@
         <relationship name="appointment" toMany="YES" deletionRule="Cascade" destinationEntity="Appointment" inverseName="business" inverseEntity="Appointment"/>
     </entity>
     <entity name="Customer" representedClassName=".customer" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
         <attribute name="customer_id" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="phone" attributeType="String"/>
+        <attribute name="zip" optional="YES" attributeType="String"/>
         <relationship name="appointment" toMany="YES" deletionRule="Nullify" destinationEntity="Appointment" inverseName="customer" inverseEntity="Appointment"/>
     </entity>
 </model>
