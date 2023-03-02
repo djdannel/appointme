@@ -22,7 +22,6 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         businessView.delegate = self
         businessView.dataSource = self
-        businessView.separatorStyle = .none
         
         searchBar.backgroundImage = UIImage()
         
@@ -80,7 +79,7 @@ extension HomeViewController: UISearchBarDelegate {
         filterData = []
         if searchText == "" { filterData = businesses }
         for business in businesses {
-            if business.business_name!.lowercased().contains(searchText.lowercased()) {
+            if business.business_name!.lowercased().contains(searchText.lowercased()) || business.service!.lowercased().contains(searchText.lowercased()) {
                 filterData.append(business)
             }
         }

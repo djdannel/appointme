@@ -16,6 +16,7 @@ class AppointmentViewController: UIViewController {
     
     @IBOutlet weak var calenderView: UIDatePicker!
     @IBOutlet weak var noneFoundLbl: UILabel!
+    @IBOutlet weak var businessNameLbl: UILabel!
     @IBOutlet weak var timeView: UITableView!
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class AppointmentViewController: UIViewController {
         moveApptsSetToArray()
         selectApptsByDate(selectedDate: resetTimestamp(date: calenderView.date))
         
+        businessNameLbl.text = business!.business_name
         timeView.delegate = self
         timeView.dataSource = self
     }
@@ -35,9 +37,15 @@ class AppointmentViewController: UIViewController {
         timeView.reloadData()
     }
     
+    @IBAction func dismissModal(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     private func moveApptsSetToArray() {
         for appt in business!.appointment as! Set<appointment> {
-            appointments.append(appt)
+            if (appt.customer_id == "") {
+                appointments.append(appt)
+            }
         }
         appointments = appointments.sorted(by: {$0.date!.compare($1.date!) == .orderedAscending})
     }
@@ -58,18 +66,27 @@ class AppointmentViewController: UIViewController {
     private func resetTimestamp(date: Date) -> Date {
         return Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: date)!
     }
+    
+    
 }
 
 extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedAppts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = timeView.dequeueReusableCell(withIdentifier: "apptTimeCell") as! ApptTimeCell
+        
         let an_appointment = selectedAppts[indexPath.row]
-        dateFormatter.dateFormat = "hh:mm"
+        dateFormatter.dateFormat = "hh:mm a"
         cell.timeLbl.text = dateFormatter.string(from: an_appointment.date!)
+        
+        cell.apptTimeView.layer.cornerRadius = 10
         
         return cell
     }

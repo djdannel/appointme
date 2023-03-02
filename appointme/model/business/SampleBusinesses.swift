@@ -17,6 +17,9 @@ class SampleBusinesses {
     static let appointment1 = appointment(context: context)
     static let appointment2 = appointment(context: context)
     static let appointment3 = appointment(context: context)
+    static let appointment4 = appointment(context: context)
+    static let appointment5 = appointment(context: context)
+    static let appointment6 = appointment(context: context)
     static let dateFormatter = DateFormatter()
     static let timeFormatter = DateFormatter()
     
@@ -39,7 +42,7 @@ class SampleBusinesses {
         appointment1.at_cust_home = false
         
         appointment2.appt_id = generateID()
-        appointment2.date = dateFormatter.date(from: "03/03/2023 14:00:00")
+        appointment2.date = dateFormatter.date(from: "03/02/2023 14:00:00")
         appointment2.business_id = business1.business_id
         appointment2.at_cust_home = false
         
@@ -60,6 +63,23 @@ class SampleBusinesses {
         business2.state = "FL"
         business2.desc = "This is the description for Frank's Fast Plumbing. If you have a leak, a clog, or anything wrong with your home plumbing, Frank's Fast Plumbing is here for you!"
         business2.rating = 4.8
+        
+        appointment4.appt_id = generateID()
+        appointment4.date = dateFormatter.date(from: "03/02/2023 08:00:00")
+        appointment4.business_id = business1.business_id
+        appointment4.at_cust_home = false
+        
+        appointment5.appt_id = generateID()
+        appointment5.date = dateFormatter.date(from: "03/02/2023 12:00:00")
+        appointment5.business_id = business1.business_id
+        appointment5.at_cust_home = false
+        
+        appointment6.appt_id = generateID()
+        appointment6.date = dateFormatter.date(from: "03/02/2023 14:00:00")
+        appointment6.business_id = business1.business_id
+        appointment6.at_cust_home = false
+        
+        business2.addToAppointment(NSSet(objects: appointment4, appointment5, appointment6))
         
         business3.business_id = generateID()
         business3.service = "house"

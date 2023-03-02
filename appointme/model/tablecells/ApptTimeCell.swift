@@ -10,6 +10,7 @@ import UIKit
 class ApptTimeCell: UITableViewCell {
 
     @IBOutlet weak var timeLbl: UILabel!
+    @IBOutlet weak var apptTimeView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +21,6 @@ class ApptTimeCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }
