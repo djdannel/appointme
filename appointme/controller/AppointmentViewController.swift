@@ -10,6 +10,7 @@ import UIKit
 class AppointmentViewController: UIViewController {
     
     var business: business?
+    var apptIdxPath: Int!
     var appointments = [appointment]()
     var selectedAppts = [appointment]()
     let dateFormatter = DateFormatter()
@@ -43,7 +44,7 @@ class AppointmentViewController: UIViewController {
     
     private func moveApptsSetToArray() {
         for appt in business!.appointment as! Set<appointment> {
-            if (appt.customer_id == "") {
+            if (appt.customer_id == "" && appt.date! > Date()) {
                 appointments.append(appt)
             }
         }
@@ -67,7 +68,12 @@ class AppointmentViewController: UIViewController {
         return Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: date)!
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCustInfo" {
+            let custInfoVC = segue.destination as! CustomerInfoViewController
+            custInfoVC.appointment = selectedAppts[apptIdxPath]
+        }
+    }
 }
 
 extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource {
@@ -77,6 +83,11 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedAppts.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        apptIdxPath = indexPath.row
+        self.performSegue(withIdentifier: "goToCustInfo", sender: self)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

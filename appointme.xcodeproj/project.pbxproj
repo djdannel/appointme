@@ -12,6 +12,9 @@
 		4E51DE9729A4459B0020A6DD /* business+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51DE9529A4459B0020A6DD /* business+CoreDataClass.swift */; };
 		4E51DE9829A4459B0020A6DD /* business+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51DE9629A4459B0020A6DD /* business+CoreDataProperties.swift */; };
 		4E51DE9C29A449C50020A6DD /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E51DE9B29A449C50020A6DD /* BusinessViewController.swift */; };
+		4E74749F29B3AA0200E7B741 /* CustomerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E74749E29B3AA0200E7B741 /* CustomerInfoViewController.swift */; };
+		4E7474A629B3B52700E7B741 /* customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7474A429B3B52700E7B741 /* customer+CoreDataClass.swift */; };
+		4E7474A729B3B52700E7B741 /* customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7474A529B3B52700E7B741 /* customer+CoreDataProperties.swift */; };
 		4EAC88E729B10A58004E0978 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC88E629B10A58004E0978 /* Assets.xcassets */; };
 		4EAC88E929B10EBC004E0978 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC88E829B10EBC004E0978 /* AppointmentViewController.swift */; };
 		4EAC88F329B11AA5004E0978 /* ApptTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC88F229B11AA5004E0978 /* ApptTimeCell.swift */; };
@@ -22,8 +25,6 @@
 		4EFCEE6929A3FCB000B9502D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6729A3FCB000B9502D /* Main.storyboard */; };
 		4EFCEE6C29A3FCB000B9502D /* appointme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6A29A3FCB000B9502D /* appointme.xcdatamodeld */; };
 		4EFCEE7129A3FCB100B9502D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFCEE6F29A3FCB100B9502D /* LaunchScreen.storyboard */; };
-		4EFCEE8429A3FD8800B9502D /* customer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8229A3FD8800B9502D /* customer+CoreDataClass.swift */; };
-		4EFCEE8529A3FD8800B9502D /* customer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8329A3FD8800B9502D /* customer+CoreDataProperties.swift */; };
 		4EFCEE8F29A401B800B9502D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCEE8E29A401B800B9502D /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,9 @@
 		4E51DE9529A4459B0020A6DD /* business+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "business+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4E51DE9629A4459B0020A6DD /* business+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "business+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4E51DE9B29A449C50020A6DD /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
+		4E74749E29B3AA0200E7B741 /* CustomerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoViewController.swift; sourceTree = "<group>"; };
+		4E7474A429B3B52700E7B741 /* customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "customer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4E7474A529B3B52700E7B741 /* customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4EAC88E629B10A58004E0978 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		4EAC88E829B10EBC004E0978 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		4EAC88F229B11AA5004E0978 /* ApptTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptTimeCell.swift; sourceTree = "<group>"; };
@@ -45,8 +49,6 @@
 		4EFCEE6B29A3FCB000B9502D /* appointme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appointme.xcdatamodel; sourceTree = "<group>"; };
 		4EFCEE7029A3FCB100B9502D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EFCEE7229A3FCB100B9502D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EFCEE8229A3FD8800B9502D /* customer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "customer+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4EFCEE8329A3FD8800B9502D /* customer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "customer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4EFCEE8E29A401B800B9502D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 				4EFCEE8E29A401B800B9502D /* HomeViewController.swift */,
 				4E51DE9B29A449C50020A6DD /* BusinessViewController.swift */,
 				4EAC88E829B10EBC004E0978 /* AppointmentViewController.swift */,
+				4E74749E29B3AA0200E7B741 /* CustomerInfoViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -144,8 +147,8 @@
 		4EFCEE8029A3FD7200B9502D /* customer */ = {
 			isa = PBXGroup;
 			children = (
-				4EFCEE8229A3FD8800B9502D /* customer+CoreDataClass.swift */,
-				4EFCEE8329A3FD8800B9502D /* customer+CoreDataProperties.swift */,
+				4E7474A429B3B52700E7B741 /* customer+CoreDataClass.swift */,
+				4E7474A529B3B52700E7B741 /* customer+CoreDataProperties.swift */,
 			);
 			path = customer;
 			sourceTree = "<group>";
@@ -230,20 +233,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E74749F29B3AA0200E7B741 /* CustomerInfoViewController.swift in Sources */,
 				4EAC88E929B10EBC004E0978 /* AppointmentViewController.swift in Sources */,
 				4EFCEE6229A3FCB000B9502D /* AppDelegate.swift in Sources */,
 				4EFCEE6429A3FCB000B9502D /* SceneDelegate.swift in Sources */,
 				4EAC88F329B11AA5004E0978 /* ApptTimeCell.swift in Sources */,
 				4EFCEE8F29A401B800B9502D /* HomeViewController.swift in Sources */,
 				4EAC88FA29B12098004E0978 /* appointment+CoreDataClass.swift in Sources */,
-				4EFCEE8429A3FD8800B9502D /* customer+CoreDataClass.swift in Sources */,
 				4E51DE9C29A449C50020A6DD /* BusinessViewController.swift in Sources */,
 				4EFCEE6C29A3FCB000B9502D /* appointme.xcdatamodeld in Sources */,
 				4EAC88FB29B12098004E0978 /* appointment+CoreDataProperties.swift in Sources */,
 				4E51DE9729A4459B0020A6DD /* business+CoreDataClass.swift in Sources */,
+				4E7474A729B3B52700E7B741 /* customer+CoreDataProperties.swift in Sources */,
 				4E51DE8B29A431D00020A6DD /* BusinessCell.swift in Sources */,
-				4EFCEE8529A3FD8800B9502D /* customer+CoreDataProperties.swift in Sources */,
 				4E51DE9829A4459B0020A6DD /* business+CoreDataProperties.swift in Sources */,
+				4E7474A629B3B52700E7B741 /* customer+CoreDataClass.swift in Sources */,
 				4E51DE9229A439170020A6DD /* SampleBusinesses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

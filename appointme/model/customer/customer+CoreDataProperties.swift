@@ -2,7 +2,7 @@
 //  customer+CoreDataProperties.swift
 //  appointme
 //
-//  Created by Daniel Alvarez on 2/20/23.
+//  Created by Daniel Alvarez on 3/4/23.
 //
 //
 
@@ -16,6 +16,7 @@ extension customer {
         return NSFetchRequest<customer>(entityName: "Customer")
     }
 
+    @NSManaged public var address: String?
     @NSManaged public var customer_id: String?
     @NSManaged public var name: String?
     @NSManaged public var phone: String?

@@ -37,19 +37,22 @@ class SampleBusinesses {
         business1.rating = 5.0
         
         appointment1.appt_id = generateID()
-        appointment1.date = dateFormatter.date(from: "03/02/2023 11:00:00")
+        appointment1.date = dateFormatter.date(from: "03/05/2023 11:00:00")
         appointment1.business_id = business1.business_id
         appointment1.at_cust_home = false
+        appointment1.business = business1
         
         appointment2.appt_id = generateID()
-        appointment2.date = dateFormatter.date(from: "03/02/2023 14:00:00")
+        appointment2.date = dateFormatter.date(from: "03/05/2023 14:00:00")
         appointment2.business_id = business1.business_id
         appointment2.at_cust_home = false
+        appointment2.business = business1
         
         appointment3.appt_id = generateID()
-        appointment3.date = dateFormatter.date(from: "03/04/2023 17:00:00")
+        appointment3.date = dateFormatter.date(from: "03/05/2023 17:00:00")
         appointment3.business_id = business1.business_id
         appointment3.at_cust_home = false
+        appointment3.business = business1
         
         business1.addToAppointment(NSSet(objects: appointment1, appointment2, appointment3))
         
@@ -65,19 +68,10 @@ class SampleBusinesses {
         business2.rating = 4.8
         
         appointment4.appt_id = generateID()
-        appointment4.date = dateFormatter.date(from: "03/02/2023 08:00:00")
-        appointment4.business_id = business1.business_id
+        appointment4.date = dateFormatter.date(from: "03/05/2023 14:30:00")
+        appointment4.business_id = business2.business_id
         appointment4.at_cust_home = false
-        
-        appointment5.appt_id = generateID()
-        appointment5.date = dateFormatter.date(from: "03/02/2023 12:00:00")
-        appointment5.business_id = business1.business_id
-        appointment5.at_cust_home = false
-        
-        appointment6.appt_id = generateID()
-        appointment6.date = dateFormatter.date(from: "03/02/2023 14:00:00")
-        appointment6.business_id = business1.business_id
-        appointment6.at_cust_home = false
+        appointment4.business = business2
         
         business2.addToAppointment(NSSet(objects: appointment4, appointment5, appointment6))
         
@@ -119,7 +113,7 @@ class SampleBusinesses {
         return image
     }
     
-    private static func generateID() -> String {
+    static func generateID() -> String {
         var number = String()
         for _ in 1...6 {
             number += "\(Int.random(in: 1...9))"

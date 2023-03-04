@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         SampleBusinesses.createSampleBusinesses()
         getBusinesses()
     }
-    
+
     private func getBusinesses() {
         do {
             businesses = try context.fetch(business.fetchRequest())

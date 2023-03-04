@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0sv-oZ-4hX">
-                                <rect key="frame" x="0.0" y="91" width="375" height="687"/>
+                                <rect key="frame" x="0.0" y="143" width="375" height="635"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Grooming, roofing, etc." id="INr-hf-d7c">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -214,9 +214,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="L1M-9s-6R7"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Schedule Appointment"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="View Availability"/>
                                 <connections>
                                     <segue destination="f6T-vU-JOc" kind="presentation" identifier="goToSetAppt" id="VAV-ha-E49"/>
                                 </connections>
@@ -307,8 +306,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <items>
-                                    <navigationItem title="Schedule Appointment" largeTitleDisplayMode="never" id="7CD-eu-D3u">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="He7-YB-Rhs">
+                                    <navigationItem title="View Availability" largeTitleDisplayMode="never" id="7CD-eu-D3u">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="He7-YB-Rhs">
                                             <connections>
                                                 <action selector="dismissModal:" destination="f6T-vU-JOc" id="goV-9N-oP3"/>
                                             </connections>
@@ -336,7 +335,7 @@
                                     </datePicker>
                                 </subviews>
                             </stackView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No appointments found for selected date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHr-8A-Mge">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No appointments " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHr-8A-Mge">
                                 <rect key="frame" x="16" y="493" width="343" height="24"/>
                                 <color key="tintColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
@@ -367,11 +366,174 @@
                         <outlet property="calenderView" destination="hB2-aS-mgH" id="QCN-i3-z3b"/>
                         <outlet property="noneFoundLbl" destination="PHr-8A-Mge" id="h4z-dL-KaE"/>
                         <outlet property="timeView" destination="jab-K1-cGo" id="TUL-X6-3Ts"/>
+                        <segue destination="HeM-Fo-Y0k" kind="presentation" identifier="goToCustInfo" id="SVY-1f-8SS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gou-3S-4ED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="-107.14285714285715"/>
+            <point key="canvasLocation" x="2287" y="-108"/>
+        </scene>
+        <!--Customer Info View Controller-->
+        <scene sceneID="mya-2X-Wbs">
+            <objects>
+                <viewController id="HeM-Fo-Y0k" customClass="CustomerInfoViewController" customModule="appointme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zdX-rL-5rk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QS4-Ni-P8K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <items>
+                                    <navigationItem title="Schedule Appointment" id="ghp-Rr-NEW">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="MtN-BK-50i">
+                                            <connections>
+                                                <action selector="dismissModal:" destination="HeM-Fo-Y0k" id="tsn-VC-Ed8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="VSs-ci-FTa">
+                                <rect key="frame" x="16" y="183.66666666666663" width="343" height="318"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qXs-Xa-bnc">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-1K-px0">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="XOo-qC-M8t"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YC7-Of-hbd">
+                                                <rect key="frame" x="0.0" y="29" width="343" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="Gqq-SK-IN9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EZd-0r-Z2M">
+                                        <rect key="frame" x="0.0" y="85.000000000000028" width="343" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEJ-R4-T9d">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="Tk9-kK-bWL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-aA-9Jh">
+                                                <rect key="frame" x="0.0" y="29" width="343" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="qXf-02-U1g"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SA1-Yw-JIN">
+                                        <rect key="frame" x="0.0" y="170.00000000000003" width="343" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address (if applicable)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z11-ZR-tj7">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="L4K-Rv-DtV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-I3-BZp">
+                                                <rect key="frame" x="0.0" y="29" width="343" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="pdx-X8-ODY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NXd-0L-HPK">
+                                        <rect key="frame" x="0.0" y="255" width="343" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specific requests (if applicable)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPZ-tR-KcL">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="qys-1f-kuO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zqS-wQ-r1d">
+                                                <rect key="frame" x="0.0" y="29" width="343" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="jud-gA-INK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointment with [business name] at [time] on [date]" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgb-SG-jmf">
+                                <rect key="frame" x="16" y="72" width="343" height="47.666666666666657"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-Dw-hVn">
+                                <rect key="frame" x="16" y="676" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ToB-1M-laE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Schedule Appointment"/>
+                                <connections>
+                                    <action selector="scheduleBtnPressed:" destination="HeM-Fo-Y0k" eventType="touchUpInside" id="ab5-Kg-YYN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3K7-k3-6Yz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VSs-ci-FTa" firstAttribute="leading" secondItem="3K7-k3-6Yz" secondAttribute="leading" constant="16" id="EyV-gu-oVW"/>
+                            <constraint firstItem="VSs-ci-FTa" firstAttribute="top" secondItem="Bgb-SG-jmf" secondAttribute="bottom" constant="64" id="FLi-8v-8cD"/>
+                            <constraint firstItem="3K7-k3-6Yz" firstAttribute="trailing" secondItem="Bgb-SG-jmf" secondAttribute="trailing" constant="16" id="Joo-be-wHe"/>
+                            <constraint firstAttribute="trailing" secondItem="QS4-Ni-P8K" secondAttribute="trailing" id="Mmv-mZ-N7Y"/>
+                            <constraint firstItem="3K7-k3-6Yz" firstAttribute="trailing" secondItem="VSs-ci-FTa" secondAttribute="trailing" constant="16" id="NvO-Id-9c6"/>
+                            <constraint firstItem="Bgb-SG-jmf" firstAttribute="leading" secondItem="3K7-k3-6Yz" secondAttribute="leading" constant="16" id="OHm-U8-kbR"/>
+                            <constraint firstItem="QS4-Ni-P8K" firstAttribute="leading" secondItem="zdX-rL-5rk" secondAttribute="leading" id="RTs-eP-g0b"/>
+                            <constraint firstItem="3K7-k3-6Yz" firstAttribute="trailing" secondItem="JaB-Dw-hVn" secondAttribute="trailing" constant="16" id="cMI-ds-tqc"/>
+                            <constraint firstItem="Bgb-SG-jmf" firstAttribute="top" secondItem="QS4-Ni-P8K" secondAttribute="bottom" constant="16" id="hML-YK-dqG"/>
+                            <constraint firstItem="3K7-k3-6Yz" firstAttribute="bottom" secondItem="JaB-Dw-hVn" secondAttribute="bottom" constant="34" id="kFo-VV-66k"/>
+                            <constraint firstItem="QS4-Ni-P8K" firstAttribute="top" secondItem="zdX-rL-5rk" secondAttribute="top" id="lid-ll-YFi"/>
+                            <constraint firstItem="JaB-Dw-hVn" firstAttribute="leading" secondItem="3K7-k3-6Yz" secondAttribute="leading" constant="16" id="xL7-4C-9lN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressField" destination="cgJ-I3-BZp" id="l8b-6u-Suy"/>
+                        <outlet property="apptInfoLbl" destination="Bgb-SG-jmf" id="oGA-55-tf2"/>
+                        <outlet property="nameField" destination="YC7-Of-hbd" id="Snu-eb-bG1"/>
+                        <outlet property="phoneField" destination="60Y-aA-9Jh" id="ybA-v0-aTs"/>
+                        <outlet property="reqsField" destination="zqS-wQ-r1d" id="X0T-fO-vMM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Te4-vF-8yC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3076" y="-107.14285714285715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qLN-IM-fTa">
@@ -401,6 +563,9 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -409,9 +574,6 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
